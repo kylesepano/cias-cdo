@@ -1,0 +1,27 @@
+﻿project_id = "cias-cdo"
+[api]
+port = 56321
+[db]
+port = 56322
+shadow_port = 56320
+major_version = 17
+[db.seed]
+enabled = false
+[studio]
+port = 56323
+[local_smtp]
+enabled = false
+[auth]
+site_url = "http://localhost:5173"
+enable_signup = false
+enable_anonymous_sign_ins = false
+minimum_password_length = 8
+jwt_expiry = 900
+[auth.email]
+# The local CLI uses this switch for the email provider, including password login.
+# The project-wide auth.enable_signup flag blocks all public registration.
+enable_signup = true
+enable_confirmations = true
+[functions.accounts]
+verify_jwt = false
+
